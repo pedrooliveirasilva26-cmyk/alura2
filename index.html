@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Financeiro | Dashboard em Tempo Real</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">📊 Mercado Financeiro</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#cotacoes">Cotações</a></li>
+                    <li><a href="#graficos">Gráficos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Seção Home -->
+        <section id="home" class="section hero">
+            <div class="container">
+                <h2>Acompanhe o Mercado Financeiro em Tempo Real</h2>
+                <p>Visualize cotações, tendências e indicadores de mercado com dados atualizados</p>
+            </div>
+        </section>
+
+        <!-- Seção Cotações -->
+        <section id="cotacoes" class="section">
+            <div class="container">
+                <h2>Cotações Principais</h2>
+                <div class="quotes-grid">
+                    <div class="quote-card">
+                        <h3>Dólar (USD)</h3>
+                        <p class="price" id="usd-price">R$ 5.00</p>
+                        <p class="variation positive" id="usd-var">+0.50%</p>
+                    </div>
+                    <div class="quote-card">
+                        <h3>Euro (EUR)</h3>
+                        <p class="price" id="eur-price">R$ 5.50</p>
+                        <p class="variation negative" id="eur-var">-0.25%</p>
+                    </div>
+                    <div class="quote-card">
+                        <h3>Bitcoin (BTC)</h3>
+                        <p class="price" id="btc-price">R$ 180,000</p>
+                        <p class="variation positive" id="btc-var">+2.10%</p>
+                    </div>
+                    <div class="quote-card">
+                        <h3>Ibovespa</h3>
+                        <p class="price" id="ibov-price">120,500</p>
+                        <p class="variation positive" id="ibov-var">+1.20%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Gráficos com p5.js -->
+        <section id="graficos" class="section">
+            <div class="container">
+                <h2>Gráfico de Tendências</h2>
+                <div id="p5-container" class="p5-wrapper"></div>
+                <div class="chart-controls">
+                    <button id="btn-day" class="btn active">Dia</button>
+                    <button id="btn-week" class="btn">Semana</button>
+                    <button id="btn-month" class="btn">Mês</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="section about">
+            <div class="container">
+                <h2>Sobre o Dashboard</h2>
+                <p>Este dashboard fornece informações atualizadas sobre o mercado financeiro, incluindo cotações de moedas, criptomoedas e índices.</p>
+                <div class="features">
+                    <div class="feature">
+                        <h3>⚡ Tempo Real</h3>
+                        <p>Dados atualizados constantemente</p>
+                    </div>
+                    <div class="feature">
+                        <h3>📈 Análise</h3>
+                        <p>Gráficos interativos com p5.js</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🎯 Preciso</h3>
+                        <p>Cotações precisas e confiáveis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mercado Financeiro Dashboard. Todos os direitos reservados.</p>
+            <p>Desenvolvido com HTML, CSS, JavaScript e <strong>p5.js</strong></p>
+        </div>
+    </footer>
+
+    <script src="sketch.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
